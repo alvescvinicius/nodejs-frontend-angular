@@ -1,27 +1,95 @@
-# WatherApp
+# nodejs-frontend-angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+Repositorio dedicado aos projetos e estudos de Angular
 
-## Development server
+Udemy - Formação Angular (v15+) - 2023
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Configurando ambiente de desenvolvimento:
 
-## Code scaffolding
+NodeJs - Instrutor usando versão 18.15.0 durante esse curso. (Na minha máquina v18.17.1).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Verficar com node -v
 
-## Build
+NPM - Instrutor do curso usando 9.1.2. (Na minha máquina 9.6.7).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Verificar com npm -v
 
-## Running unit tests
+Angular - Instrutor usando versão 16.0.2. (Na minha máquina 15.2..4).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Verificar com ng -v
 
-## Running end-to-end tests
+2. Instalando extensões no VsCode:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Adicionar extensões:
 
-## Further help
+Angular Extension Pack
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular 10 Snippet (Instrtutor Usando)
+
+3. O que aprenderemos desenvolvendo o projeto:
+
+4. Gerando nosso projeto:
+
+# OBS: Criei um repositório no GitHub para os projetos que serão feitos no curso:
+
+cd C:\Desenvolvimento\Node-Udemy
+ 
+git clone https://github.com/alvescvinicius/nodejs-frontend-angular.git -b main
+
+cd C:\Desenvolvimento\Node-Udemy\nodejs-frontend-angular
+
+Após clone, foi criado a branch projeto-1:
+
+git checkout -b projeto-1
+
+git push origin projeto-1
+ 
+#
+
+Abrir CMD como administrador:
+
+cd C:\Desenvolvimento\Node-Udemy\nodejs-frontend-angular
+
+ng new wather-app
+
+- Usar sistema de rotas do angular.
+
+- Estilo SCSS.
+
+cd wather-app
+
+code .
+
+CTRL + J (Abrir terminal no VSCODE)
+
+npm start
+
+# OBS: Commitar criação do projeto no Git
+
+Utilizar nossa branch projeto-1 (Diretorio root do nosso projeto: wather-app)
+
+git checkout projeto-1
+
+git add .
+
+git commit -m "Criacao do projeto"
+
+git push
+
+#
+
+5. Adicionando estilos e importações:
+
+6. Instalando biblioteca de ícones:
+
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome@0.12.x
+
+7. Criando nosso primeiro componente e rota
+
+Criar diretorio modules/wheater/page
+
+cd modules/wheater/page
+
+ng generate component wheater-home
