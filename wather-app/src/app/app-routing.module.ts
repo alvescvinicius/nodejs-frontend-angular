@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WheaterHomeComponent } from './modules/pages/wheater-home/wheater-home.component';
+import { WeatherHomeComponent } from './modules/weather/pages/weather-home/weather-home.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -8,7 +9,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },{
     path: 'weather',
-    component: WheaterHomeComponent,
+    component: WeatherHomeComponent,
   }
 ];
 
