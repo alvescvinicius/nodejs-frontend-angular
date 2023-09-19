@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { WheaterHomeComponent } from './modules/pages/wheater-home/wheater-home.component';
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'weather',
+    pathMatch: 'full',
+  },{
+    path: 'weather',
+    component: WheaterHomeComponent,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
