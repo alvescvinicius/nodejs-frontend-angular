@@ -93,3 +93,16 @@ Criar diretorio modules/wheater/page
 cd modules/wheater/page
 
 ng generate component wheater-home
+
+8. Criando conta na Open Weather Map
+
+https://openweathermap.org/
+
+Criar conta para utilizar API.
+
+Ir em api_keys e copiar a chave: 5fe67cc757b48494bdea0bbcc17702bf
+
+Verificar se chave já está disponivel:
+http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=5fe67cc757b48494bdea0bbcc17702bf
+
+Caso dê 'Invalid API key'. aguardar pois a chave ainda não foi ativa.
