@@ -113,5 +113,13 @@ Criar diretório: app/modules/weather/services
 
 cd app/modules/weather/services
 
-ng g service weather
+ng g service 
+
+10. Adicionando imagens na aplicação e consumindo serviço de previsão do tempo
+
+Colocar imagens necessarias no diretorio assets
+
+Primeiro foi configurado o servico para consumo da API
+
+Ao executar projeto, abrir o console do browser e verificar se houve retorno do objecto da API
 
