@@ -106,3 +106,12 @@ Verificar se chave já está disponivel:
 http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=5fe67cc757b48494bdea0bbcc17702bf
 
 Caso dê 'Invalid API key'. aguardar pois a chave ainda não foi ativa.
+
+9. Criando serviço de previsão do tempo
+
+Criar diretório: app/modules/weather/services
+
+cd app/modules/weather/services
+
+ng g service weather
+
