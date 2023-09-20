@@ -134,3 +134,12 @@ cd \app\modules\weather\components
 ng g component weather-card
 
 git commit -m "12. Criacao do component weather-card"
+
+-----------------------------------------------------
+
+FAZER MERGE:
+
+git checkout main
+git pull origin main
+git merge projeto-1
+git push origin main
