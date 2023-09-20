@@ -19,3 +19,6 @@
 
   </form>
 </div>
+
+<!-- Chamando componente filho -->
+<app-weather-card *ngIf="weatherDatas" [weatherDatasInput]="this.weatherDatas"></app-weather-card>
