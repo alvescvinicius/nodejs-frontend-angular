@@ -1,3 +1,4 @@
+import { Weather } from 'src/app/models/interfaces/weather.interface';
 import { WeatherService } from './../../services/weather.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class WeatherHomeComponent implements OnInit {
 
   initialCityName = 'Rio De Janeiro';
+  weatherDatas!: Weather;
 
   // Servico sendo injetado nessa  (o service esta assinado com @Injectable)
   constructor(private weatherService: WeatherService ){ }
@@ -21,7 +23,8 @@ export class WeatherHomeComponent implements OnInit {
     this.weatherService.getWeatherDatas(cityName)
     .subscribe({
       next: (response) => {
-        console.log(response);
+        response && (this.weatherDatas = response);
+        console.log(this.weatherDatas);
       },
       error:(error) => console.log(error),
     })

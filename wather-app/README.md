@@ -123,3 +123,4 @@ Primeiro foi configurado o servico para consumo da API
 
 Ao executar projeto, abrir o console do browser e verificar se houve retorno do objecto da API
 
+- Criar arquivo de interface: app/models/interfaces/weather.interface.ts
