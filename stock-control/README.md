@@ -65,6 +65,18 @@ Em angular.json:
             ],
 
 Alterar app.component.ts
+
 Alterar app.module.ts
 
 * Seguir configurações Getting start da página do PrimeNg
+
+# 21. Implementando layout da tela de login - Parte 1
+
+Adicionar imagem em assets.
+
+Criar diretório app/modules:
+
+cd modules
+
+ng g component home
+
