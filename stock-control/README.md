@@ -80,3 +80,28 @@ cd modules
 
 ng g component home
 
+# 24. Criando services de criar e autenticar usuário
+
+Baixar Api: https://github.com/marcosJuniorPassarella/stock-api
+
+cd C:\Desenvolvimento\stock-api-master
+
+npm install
+
+npm run dev
+
+Criar environments:
+
+mkdir stock-control\src\environments
+
+Criar serviço user:
+
+mkdir stock-control\src\app\services\user
+
+cd stock-control\src\app\services\user
+
+ng g service user
+
+Criar interface:
+
+mkdir stock-control\src\app\models\interfaces
