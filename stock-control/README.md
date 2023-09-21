@@ -117,3 +117,11 @@ Usaremos ngx-cookie-service para trabalhar com Cookie.
 Instalação: npm i ngx-cookie-service@15.0.0
 
 Configuração: AppModule - providers
+
+## 28. Criando módulo, componente e rota funcionalidade de dashboard
+
+cd \stock-control\modules
+
+ng generate module dashboard
+
+mkdir \stock-control\modules\page
