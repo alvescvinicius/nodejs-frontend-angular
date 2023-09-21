@@ -44,7 +44,7 @@ git commit -m "Criacao do projeto-2"
 
 git push origin projeto-2
 
-# Instalando PrimeNg
+## Instalando PrimeNg
 
 npm i primeng@15.4.1
 
@@ -52,7 +52,7 @@ npm i primeicons@6.0.1
 
 npm i primeflex@3.3.0
 
-# Configurando PrimeNg
+## Configurando PrimeNg
 
 Em angular.json:
 
@@ -70,7 +70,7 @@ Alterar app.module.ts
 
 * Seguir configurações Getting start da página do PrimeNg
 
-# 21. Implementando layout da tela de login - Parte 1
+## 21. Implementando layout da tela de login - Parte 1
 
 Adicionar imagem em assets.
 
@@ -80,7 +80,7 @@ cd modules
 
 ng g component home
 
-# 24. Criando services de criar e autenticar usuário
+## 24. Criando services de criar e autenticar usuário
 
 Baixar Api: https://github.com/marcosJuniorPassarella/stock-api
 
@@ -110,7 +110,7 @@ Criar interface Auth:
 
 mkdir \stock-control\src\app\models\interfaces\user\auth
 
-# 25. Implementando funcionalidade de criar e autenticar usuário
+## 25. Implementando funcionalidade de criar e autenticar usuário
 
 Usaremos ngx-cookie-service para trabalhar com Cookie.
 
