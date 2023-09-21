@@ -18,13 +18,13 @@ export class UserService {
 
   signupUser(requestDatas: SignupUserRequest): Observable<SignupUserResponse> {
     return this.http.post<SignupUserResponse> (
-      `${API_URL}/user`,
+      `${this.API_URL}/user`,
       requestDatas
     )
   }
 
   authUser(requestDatas: AuthRequest): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${API_URL}/auth`,requestDatas)
+    return this.http.post<AuthResponse>(`${this.API_URL}/auth`,requestDatas)
   }
 
 }
