@@ -1,10 +1,10 @@
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { AuthRequest } from './../../models/interfaces/user/auth/AuthRequest';
 import { UserService } from './../../services/user/user.service';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { SignupUserRequest } from 'src/app/models/interfaces/user/SignupUserRequest';
-import { SignupUserResponse } from 'src/app/models/interfaces/user/SignupUserResponse';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -28,7 +28,8 @@ export class HomeComponent {
     private formBuilder: FormBuilder,
     private userService: UserService,
     private cookieService: CookieService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ) {}
 
   onSubmitLoginForm(): void {
@@ -38,6 +39,7 @@ export class HomeComponent {
           if (response) {
             this.cookieService.set('USER_INFO', response?.token);
             this.loginForm.reset();
+            this.router.navigate(['/dashboard']);
             this.messageService.add({
               severity: 'success',
               summary: 'Sucesso',
