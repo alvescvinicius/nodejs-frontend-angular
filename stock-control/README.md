@@ -104,4 +104,16 @@ ng g service user
 
 Criar interface:
 
-mkdir stock-control\src\app\models\interfaces
+mkdir stock-control\src\app\models\interfaces\user
+
+Criar interface Auth:
+
+mkdir \stock-control\src\app\models\interfaces\user\auth
+
+# 25. Implementando funcionalidade de criar e autenticar usuário
+
+Usaremos ngx-cookie-service para trabalhar com Cookie.
+
+Instalação: npm i ngx-cookie-service@15.0.0
+
+Configuração: AppModule - providers
