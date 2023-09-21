@@ -125,3 +125,13 @@ cd \stock-control\modules
 ng generate module dashboard
 
 mkdir \stock-control\modules\page
+
+cd \stock-control\modules\page
+
+ng g component dashboard-home
+
+## 30. Implementando guarda de rotas para rotas protegidas
+
+Criar diretório app/guards
+
+Criar service auth-guard

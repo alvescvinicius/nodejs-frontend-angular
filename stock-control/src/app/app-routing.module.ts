@@ -1,14 +1,13 @@
-import { DashboardModule } from './modules/dashboard/dashboard.module';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardHomeComponent } from './modules/dashboard/page/dashboard-home/dashboard-home.component';
 import { HomeComponent } from './modules/home/home.component';
+import { AuthGuard } from './guards/auth-guard.service';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -17,10 +16,11 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-    import('./modules/dashboard/dashboard.module').then(
-      (m) => m.DashboardModule
-    )
-  }
+      import('./modules/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
