@@ -1,4 +1,3 @@
-import { PrimeNGConfig } from 'primeng/api';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,19 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { ToastModule } from 'primeng/toast';
 
 import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,9 +28,9 @@ import { HomeComponent } from './modules/home/home.component';
     CardModule,
     InputTextModule,
     ButtonModule,
-    ToastModule
+    ToastModule,
   ],
-  providers: [CookieService],
-  bootstrap: [AppComponent]
+  providers: [CookieService, MessageService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
