@@ -135,3 +135,12 @@ ng g component dashboard-home
 Criar diretório app/guards
 
 Criar service auth-guard
+
+## 31. Instalando biblioteca ChartJs
+
+npm install chart.js@4.3.0 --save
+
+Em angular.json:
+
+"scripts": ["node_modules/chart.js/dist/chart.js"]
+
