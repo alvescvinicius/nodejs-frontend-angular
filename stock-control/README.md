@@ -144,3 +144,14 @@ Em angular.json:
 
 "scripts": ["node_modules/chart.js/dist/chart.js"]
 
+## 32. Criando shared module componente de Toolbar
+
+Criar shared module para usar em todos os components
+
+cd \stock-control\app\
+
+ng generate module shared
+
+Criar \stock-control\app\components
+
+ng g component toolbar-navigation
