@@ -23,6 +23,7 @@ import { ToolbarNavigationComponent } from './components/toolbar-navigation/tool
     CardModule,
     ButtonModule
   ],
+  exports: [ToolbarNavigationComponent],
   providers: [DialogService, CurrencyPipe]
 })
 export class SharedModule { }
