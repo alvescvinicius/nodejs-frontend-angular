@@ -155,3 +155,10 @@ ng generate module shared
 Criar \stock-control\app\components
 
 ng g component toolbar-navigation
+
+## 34. Implementando service de buscar produtos
+
+mkdir \stock-control\src\app\models\interfaces\products\request
+mkdir \stock-control\src\app\models\interfaces\products\response
+
+Criar arquivo: \stock-control\src\app\models\interfaces\products\response\GetAllProductsResponse.ts
