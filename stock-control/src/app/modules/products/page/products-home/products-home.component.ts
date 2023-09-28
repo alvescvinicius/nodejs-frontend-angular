@@ -1,12 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { MessageService } from 'primeng/api';
-
-import { GetAllProductsResponse } from './../../../../models/interfaces/products/response/GetAllProductsResponse';
-import { ProductsService } from './../../../../services/products/products.service';
-import { ProductsDataTransferService } from 'src/app/shared/service/products/products-data-transfer.service';
 import { Subject, takeUntil } from 'rxjs';
+import { MessageService } from 'primeng/api';
+import { ProductsService } from '../../../../services/products/products.service';
+import { ProductsDataTransferService } from 'src/app/shared/service/products/products-data-transfer.service';
+import { GetAllProductsResponse } from 'src/app/models/interfaces/products/response/GetAllProductsResponse';
+import { EventAction } from 'src/app/models/interfaces/products/event/EventAction';
 
 @Component({
   selector: 'app-products-home',
@@ -16,6 +15,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class ProductsHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();
   public productsDatas: Array<GetAllProductsResponse> = [];
+
   constructor(
     private productsService: ProductsService,
     private productsDtService: ProductsDataTransferService,
@@ -29,13 +29,13 @@ export class ProductsHomeComponent implements OnInit, OnDestroy {
 
   getServiceProductsDatas() {
     const productsLoaded = this.productsDtService.getProductsDatas();
+
     if (productsLoaded.length > 0) {
       this.productsDatas = productsLoaded;
-    } else this.getAPIProductsData();
-    console.log('DADOS DE PRODUTOS', this.productsDatas);
+    } else this.getAPIProductsDatas();
   }
 
-  getAPIProductsData() {
+  getAPIProductsDatas() {
     this.productsService
       .getAllProducts()
       .pipe(takeUntil(this.destroy$))
@@ -43,7 +43,6 @@ export class ProductsHomeComponent implements OnInit, OnDestroy {
         next: (response) => {
           if (response.length > 0) {
             this.productsDatas = response;
-            console.log('DADOS DE PRODUTOS', this.productsDatas);
           }
         },
         error: (err) => {
@@ -57,7 +56,12 @@ export class ProductsHomeComponent implements OnInit, OnDestroy {
           this.router.navigate(['/dashboard']);
         },
       });
+  }
 
+  handleProductAction(event: EventAction): void {
+    if (event) {
+      console.log('DADOS DO EVENTO RECEBIDO', event);
+    }
   }
 
   ngOnDestroy(): void {
