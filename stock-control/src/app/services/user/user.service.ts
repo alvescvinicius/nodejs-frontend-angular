@@ -5,7 +5,7 @@ import { SignupUserRequest } from 'src/app/models/interfaces/user/SignupUserRequ
 import { SignupUserResponse } from 'src/app/models/interfaces/user/SignupUserResponse';
 import { AuthRequest } from 'src/app/models/interfaces/user/auth/AuthRequest';
 import { AuthResponse } from 'src/app/models/interfaces/user/auth/AuthResponse';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
