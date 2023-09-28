@@ -15,7 +15,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class ProductsHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();
-  private productsDatas: Array<GetAllProductsResponse> = [];
+  public productsDatas: Array<GetAllProductsResponse> = [];
   constructor(
     private productsService: ProductsService,
     private productsDtService: ProductsDataTransferService,
